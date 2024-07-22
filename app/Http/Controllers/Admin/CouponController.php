@@ -22,7 +22,7 @@ class CouponController extends Controller
     } // end add function redirect to add blade coupon
 
     public function edit(){
-
+      $mohamed = 1;
     }
 
     public function store(Request $request){
