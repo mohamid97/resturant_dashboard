@@ -57,12 +57,19 @@ Route::middleware('checkIfAdmin')->prefix('admin')->group(function (){
         Route::get('/update', [AuthController::class , 'show_update'])->name('admin.auth.showUpdate');
         Route::get('/logout', [AuthController::class , 'logout'])->name('admin.auth.logout');
         Route::post('/update', [AuthController::class,'update'])->name('admin.auth.update');
+        
     });
 
     // start coupons
     Route::prefix('coupons')->group(function(){
-        Route::get('/get' , [CouponController::class , 'get'])->name('admin.coupons.get');
+        Route::get('/get' , [CouponController::class , 'index'])->name('admin.coupons.index');
         Route::get('/add', [CouponController::class , 'add'])->name('admin.coupons.add');
+        Route::post('/store', [CouponController::class , 'store'])->name('admin.coupons.store');
+        Route::get('/edit/{id}',[CouponController::class , 'edit'])->name('admin.coupons.edit');
+
+        Route::get('/destroy/{id}' , [CouponController::class , 'destroy'])->name('admin.coupons.destroy');
+        Route::get('/soft_delete/{id}' , [CouponController::class , 'soft_delete'])->name('admin.coupons.soft_delete');
+        Route::get('/restore/{id}' , [CouponController::class , 'restore'])->name('admin.coupons.restore');
     });
     // start slider
     Route::prefix('slider')->group(function (){
