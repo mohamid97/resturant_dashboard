@@ -76,6 +76,7 @@ Route::middleware('checkIfAdmin')->prefix('admin')->group(function (){
     // start points 
     Route::prefix('points')->group(function(){
        Route::get('index' , [PointsController::class , 'get'])->name('admin.points.index');
+       Route::post('/update/points_price' ,[PointsController::class , 'update_price'])->name('admin.points_pirce.update');
     });
     // start slider
     Route::prefix('slider')->group(function (){

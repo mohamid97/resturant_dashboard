@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('points_prices', function (Blueprint $table) {
             $table->id();
             $table->integer('num_points');
+            $table->integer('order_amount');
             $table->string('num_pounds')->default('1');
+            $table->string('order_points')->default('1');
             $table->timestamps();
         });
     }

@@ -17,7 +17,9 @@ class PointsSeeder extends Seeder
     {
         DB::table('points_prices')->insertGetId([
             'num_points' => 10,
-            'num_pounds'=>'1'
+            'order_points' => 100,
+            'order_amount'=>'1',
+            'num_pounds'=>'1',
         ]);
     }
 }
