@@ -57,6 +57,7 @@
                             <th>Photo</th>
                             <th>name </th>
                             <th>Code </th>
+                            <th>Percentage </th>
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th>Action</th>
@@ -73,6 +74,7 @@
                                 </td>
                                 <td>{{ $coupon->name }}</td>
                                 <td>{{ $coupon->code }}</td>
+                                <td>{{ $coupon->percentage }}</td>
                                 <td>{{ $coupon->start_date }}</td>
                                 <td>{{ $coupon->end_date }}</td>
 

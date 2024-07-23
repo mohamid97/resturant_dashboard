@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CouponsRequest;
+use App\Http\Requests\Admin\UpdateCouponRequest;
 use App\Models\admin\Coupon;
 use App\Models\Admin\Lang;
 use Illuminate\Http\Request;
@@ -80,8 +81,42 @@ class CouponController extends Controller
     } // end store function 
 
 
-    public function update(Request $request){
-
+    public function update(UpdateCouponRequest $request , $id){
+        try{
+            
+            $coupon = Coupon::findOrFail($id);
+ 
+            DB::beginTransaction();
+            $image_name = null;
+            if($request->has('photo')){
+                $image_name = $request->photo->getClientOriginalName();
+                $request->photo->move(public_path('uploads/images/coupon'), $image_name);
+            }
+            
+            $startDate = Carbon::parse($request->input('start_date'))->format('Y-m-d H:i:s');
+            $endDate = Carbon::parse($request->input('end_date'))->format('Y-m-d H:i:s');
+          
+            $coupon->update([
+                'start_date' => $startDate,
+                'end_date' => $endDate,
+                'percentage' => $request->input('percentage'),
+                'image' => isset($image_name) ? $image_name : $coupon->image,
+            ]);
+            foreach ($this->langs as $lang) {
+                $coupon->{'name:'.$lang->code}  = $request->name[$lang->code];
+                $coupon->{'des:'.$lang->code}  = $request->des[$lang->code];
+                $coupon->{'small_des:'.$lang->code}  = $request->small_des[$lang->code];
+            }
+            $coupon->save();
+            DB::commit();
+            Alert::success('Success', 'Coupon Updated Successfully !');
+            return redirect()->route('admin.coupons.index');
+        }catch (\Exception $e){
+            dd($e->getMessage() , $e->getLine());
+            Alert::error('error', 'Tell The Programmer To solve Error');
+            DB::rollBack();
+            return redirect()->route('admin.coupons.index');
+        }
     } // end update function 
 
 

@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CouponsRequest extends FormRequest
+class UpdateCouponRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,7 @@ class CouponsRequest extends FormRequest
             'name.*'=>'required|string',
             'des.*'=>'required',
             'small_des.*'=>'required|string',
-            'photo'=>'required|image',
+            'photo'=>'nullable|image',
             'percentage'=>'required',
             'start_date'=>'required|date',
             'end_date'=>'required|date',

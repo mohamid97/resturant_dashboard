@@ -66,7 +66,7 @@ Route::middleware('checkIfAdmin')->prefix('admin')->group(function (){
         Route::get('/add', [CouponController::class , 'add'])->name('admin.coupons.add');
         Route::post('/store', [CouponController::class , 'store'])->name('admin.coupons.store');
         Route::get('/edit/{id}',[CouponController::class , 'edit'])->name('admin.coupons.edit');
-
+        Route::post('/update/{id}' ,[CouponController::class , 'update'])->name('admin.coupons.update');
         Route::get('/destroy/{id}' , [CouponController::class , 'destroy'])->name('admin.coupons.destroy');
         Route::get('/soft_delete/{id}' , [CouponController::class , 'soft_delete'])->name('admin.coupons.soft_delete');
         Route::get('/restore/{id}' , [CouponController::class , 'restore'])->name('admin.coupons.restore');
