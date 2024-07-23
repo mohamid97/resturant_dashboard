@@ -66,6 +66,8 @@ class SettingController extends Controller
                 $setting->carts = $request->carts;
                 $setting->city_price = $request->city_price;
                 $setting->orders      = $request->orders;
+                $setting->points      = $request->points;
+                $setting->coupons      = $request->coupons;
                foreach ($this->files as $file){
                   $image_name = $this->uploadFile($request , $file);
                    if($image_name){

@@ -33,6 +33,7 @@ use App\Http\Controllers\Admin\MediaGroupcontroller;
 use App\Http\Controllers\Admin\OffersController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\PaymentController;
+use App\Http\Controllers\Admin\PointsController;
 use App\Models\Admin\Payment;
 use Illuminate\Routing\RouteRegistrar;
 
@@ -70,6 +71,11 @@ Route::middleware('checkIfAdmin')->prefix('admin')->group(function (){
         Route::get('/destroy/{id}' , [CouponController::class , 'destroy'])->name('admin.coupons.destroy');
         Route::get('/soft_delete/{id}' , [CouponController::class , 'soft_delete'])->name('admin.coupons.soft_delete');
         Route::get('/restore/{id}' , [CouponController::class , 'restore'])->name('admin.coupons.restore');
+    });
+
+    // start points 
+    Route::prefix('points')->group(function(){
+       Route::get('index' , [PointsController::class , 'get'])->name('admin.points.index');
     });
     // start slider
     Route::prefix('slider')->group(function (){

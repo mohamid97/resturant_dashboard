@@ -32,5 +32,8 @@ class DatabaseSeeder extends Seeder
         $this->call(MissionVissionSeeder::class);
         $this->call(GovernorateSeeder::class);
         $this->call(citiySeeder::class);
+        $this->call(PointsSeeder::class);
     }
+
+    
 }

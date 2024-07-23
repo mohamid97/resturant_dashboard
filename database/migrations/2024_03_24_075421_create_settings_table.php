@@ -51,6 +51,7 @@ return new class extends Migration
             $table->string('city_price')->nullable();
             $table->string('orders')->nullable();
             $table->string('coupons')->nullable();
+            $table->string('points')->nullable();
             $table->timestamps();
         });
     }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AchivementController;
 use App\Http\Controllers\Api\CartController;
 use App\Http\Controllers\Api\CmsController;
+use App\Http\Controllers\Api\CouponsController;
 use App\Http\Controllers\Api\DescriptionController;
 use App\Http\Controllers\Api\FaqController;
 use App\Http\Controllers\Api\FeedbackController;
@@ -61,6 +62,14 @@ Route::middleware(['auth:sanctum' , 'checkLang'])->group(function (){
     Route::prefix('offers')->group(function(){
          Route::get('/get' , [OffersController::class , 'get']);
          Route::post('/offer_details' , [OffersController::class , 'order_details']);
+    });
+
+    // start coupons
+    Route::prefix('coupons')->group(function(){
+       Route::get('/get' , [CouponsController::class , 'get']);
+       Route::post('/coupon_details' , [CouponsController::class , 'coupon_details']);
+
+
     });
 
     // government price

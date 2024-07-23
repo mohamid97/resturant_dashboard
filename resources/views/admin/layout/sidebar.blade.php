@@ -634,6 +634,30 @@
             @endif
 
 
+            @if($settings->points)
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <p>
+                            Points
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+
+                        <li class="nav-item">
+                            <a href="{{route('admin.points.index')}}" class="nav-link">
+                                <i class="fas fa-hand-holding-usd"></i>
+                                <p> Points </p>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+         @endif
+
+
 
 
 

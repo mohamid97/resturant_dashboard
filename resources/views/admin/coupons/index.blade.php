@@ -95,10 +95,6 @@
                                         </a>
                                     @endif
 
-
-
-
-
                                     <a href="{{route('admin.coupons.destroy' ,  ['id' => $coupon->id])}}">
                                         <button class="btn btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i> Remove</button>
                                     </a>
