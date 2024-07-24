@@ -5,12 +5,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>All Cards </h1>
+                <h1>@lang('sidebar.all_carts') </h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                    <li class="breadcrumb-item active">Carts</li>
+                    <li class="breadcrumb-item"><a href="{{route('admin.index')}}">@lang('main.home') </a></li>
+                    <li class="breadcrumb-item active">@lang('sidebar.carts') </li>
                 </ol>
             </div>
         </div>
@@ -23,7 +23,7 @@
         <div class="card card-info">
 
             <div class="card-header">
-                <h3 class="card-title">All Carts</h3>
+                <h3 class="card-title">@lang('sidebar.all_carts') </h3>
 
             </div>
             <!-- /.card-header -->
@@ -32,10 +32,10 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Quntity</th>
-                        <th>Action</th>
+                        <th>@lang('main.first_name') </th>
+                        <th>@lang('main.last_name')</th>
+                        <th>@lang('main.quntity')</th>
+                        <th>@lang('main.action')</th>
 
                     </tr>
                     </thead>
@@ -50,12 +50,12 @@
                             <td>{{$cart->items->sum('quantity') }}</td>
                             <td>
                                 <a href="{{route('admin.carts.delete' ,  ['id' => $cart->id])}}">
-                                    <button class="btn btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i> Remove</button>
+                                    <button class="btn btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i> @lang('main.remove')</button>
                                 </a>
 
 
                                 <a href="{{route('admin.carts.show_details' ,  ['id' => $cart->id])}}">
-                                    <button class="btn btn-sm btn-primary"><i class="nav-icon fas fa-eye"></i> Show</button>
+                                    <button class="btn btn-sm btn-primary"><i class="nav-icon fas fa-eye"></i> @lang('main.show')</button>
                                 </a>
 
                             </td>
@@ -63,7 +63,7 @@
                         </tr>
                     @empty
                             <tr>
-                                <td colspan="3"> No Data</td>
+                                <td colspan="3"> @lang('main.no_data')</td>
                             </tr>
                     @endforelse
 

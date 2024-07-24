@@ -18,12 +18,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Coupons </h1>
+                    <h1>@lang('sidebar.coupons') </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Coupons</li>
+                        <li class="breadcrumb-item"><a href="#">@lang('main.home')</a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.coupons')</li>
                     </ol>
                 </div>
             </div>
@@ -36,7 +36,7 @@
 
                 <a href="{{route('admin.coupons.add')}}" style="color: #FFF">
                     <button class="btn btn-info" >
-                        <i class="nav-icon fas fa-plus"></i> Add New Coupon
+                        <i class="nav-icon fas fa-plus"></i>  @lang('sidebar.add_coupon')
                     </button>
                 </a>
 
@@ -45,7 +45,7 @@
             <div class="card card-info">
 
                 <div class="card-header">
-                    <h3 class="card-title">All Coupons</h3>
+                    <h3 class="card-title"> @lang('sidebar.all_coupons')</h3>
 
                 </div>
                 <!-- /.card-header -->
@@ -54,13 +54,13 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Photo</th>
-                            <th>name </th>
-                            <th>Code </th>
-                            <th>Percentage </th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <th>Action</th>
+                            <th>   @lang('main.photo')</th>
+                            <th>   @lang('main.name') </th>
+                            <th>   @lang('main.code') </th>
+                            <th>   @lang('main.percentage') </th>
+                            <th>   @lang('main.start_date')</th>
+                            <th>  @lang('main.end_date')</th>
+                            <th> @lang('main.action')</th></th>
 
                         </tr>
                         </thead>
@@ -81,22 +81,22 @@
 
                                 <td>
                                     <a href="{{route('admin.coupons.edit' ,  ['id' => $coupon->id])}}">
-                                        <button class="btn btn-sm btn-info"> <i class="nav-icon fas fa-edit"></i> Edit</button>
+                                        <button class="btn btn-sm btn-info"> <i class="nav-icon fas fa-edit"></i>  @lang('main.edit')</th></button>
                                     </a>
 
                                     @if($coupon->deleted_at == null)
 
                                         <a href="{{route('admin.coupons.soft_delete' ,  ['id' => $coupon->id])}}">
-                                            <button class="btn btn-sm btn-info"><i class="nav-icon fas fa-trash"></i> Soft Delete</button>
+                                            <button class="btn btn-sm btn-info"><i class="nav-icon fas fa-trash"></i>  @lang('main.soft_delete')</th></button>
                                         </a>
                                     @else
                                         <a href="{{route('admin.coupons.restore' ,  ['id' => $coupon->id])}}">
-                                            <button class="btn btn-sm btn-info"><i class="nav-icon fas fa-trash-restore"></i> Restore</button>
+                                            <button class="btn btn-sm btn-info"><i class="nav-icon fas fa-trash-restore"></i>  @lang('main.restore')</th></button>
                                         </a>
                                     @endif
 
                                     <a href="{{route('admin.coupons.destroy' ,  ['id' => $coupon->id])}}">
-                                        <button class="btn btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i> Remove</button>
+                                        <button class="btn btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i>  @lang('main.remove')</th></button>
                                     </a>
 
                                 </td>
@@ -104,7 +104,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="3"> No Data</td>
+                                <td colspan="3">  @lang('main.no_data')</th></td>
                             </tr>
                         @endforelse
 

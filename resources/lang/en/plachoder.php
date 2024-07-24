@@ -12,7 +12,12 @@ return [
     'enter_title'=>'Enter Title',
     'enter_price'=>'Enter Price',
     'enter_old_price'=>'Enter Old Price',
-    'select_products'=>'Select Products'
+    'select_products'=>'Select Products',
+    'enter_percentage'=>'Enter Percentage',
+    'enter_points'=>'Enter Points',
+    'enter_pounds'=>'Enter Pounds',
+    'enter_order_amount'=>'Enter Order Amount',
+    'enter_order_points'=>'Enter Order Points'
 
 
  

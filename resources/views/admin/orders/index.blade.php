@@ -5,12 +5,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>All Orders </h1>
+                <h1>@lang('sidebar.all_orders')  </h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                    <li class="breadcrumb-item active">Orders</li>
+                    <li class="breadcrumb-item"><a href="{{route('admin.index')}}">@lang('main.home') </a></li>
+                    <li class="breadcrumb-item active">@lang('sidebar.orders') </li>
                 </ol>
             </div>
         </div>
@@ -23,7 +23,7 @@
         <div class="card card-info">
 
             <div class="card-header">
-                <h3 class="card-title">All Orders</h3>
+                <h3 class="card-title">@lang('sidebar.all_orders') </h3>
 
             </div>
             <!-- /.card-header -->
@@ -32,13 +32,13 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Quntity</th>
-                        <th>Status</th>
-                        <th>Payment Status</th>
-                        <th>Payment Method</th>
-                        <th>Action</th>
+                        <th>@lang('main.first_name') </th>
+                        <th>@lang('main.last_name')</th>
+                        <th>@lang('main.quntity')</th>
+                        <th>@lang('main.status')</th>
+                        <th>@lang('main.payment_status')</th>
+                        <th>@lang('main.payment_method')</th>
+                        <th>@lang('main.action')</th>
 
                     </tr>
                     </thead>
@@ -53,50 +53,50 @@
                             <td>{{$order->items->sum('quantity') }}</td>
                             <td>
                              @if ($order->status == 'pending')
-                               <span class="badge badge-primary">Pending</span>
+                               <span class="badge badge-primary">@lang('main.pending')</span>
                              @elseif ($order->status == 'proceed')
-                               <span class="badge badge-info">Proceed</span>
+                               <span class="badge badge-info"> @lang('main.proceed')</span>
                              @elseif ($order->status == 'on way')
-                               <span class="badge badge-warning">On Way</span>
+                               <span class="badge badge-warning">@lang('main.on_way')</span>
                             @elseif ($order->status == 'finshed')
-                               <span class="badge badge-success">Finshed</span>
+                               <span class="badge badge-success">@lang('main.finished')</span>
                             @elseif ($order->status == 'canceled')
-                            <span class="badge badge-danger">Canceled</span>
+                            <span class="badge badge-danger">@lang('main.canceled')</span>
                              @endif   
                             </td>
 
                             <td>
                                 @if ($order->payment_status == 'paid')
-                                  <span class="badge badge-success">Paid</span>
+                                  <span class="badge badge-success">@lang('main.paid')</span>
                                 @elseif ($order->payment_status == 'unpaid')
-                                  <span class="badge badge-danger">Unpaid</span>
+                                  <span class="badge badge-danger">@lang('main.unpaid')</span>
                                 @endif   
                                </td>
                           
 
                             <td>
                                 @if ($order->payment_method == 'cash')
-                                    <span class="badge badge-success">Cahs</span>
+                                    <span class="badge badge-success">@lang('main.cahs')</span>
                                 @elseif ($order->payment_method == 'paymob')
-                                <span class="badge badge-success">Paymob</span>
+                                <span class="badge badge-success">@lang('main.paymob')</span>
                                 @elseif ($order->payment_method == 'other')
-                                <span class="badge badge-success">Other</span>
+                                <span class="badge badge-success">@lang('main.other')</span>
                                 @elseif ($order->payment_method == 'paypal')
-                                <span class="badge badge-success">Paypal</span>
+                                <span class="badge badge-success">@lang('main.paypal')</span>
                                 @endif   
                             </td>
                             <td>
                                 <a href="{{route('admin.orders.delete' ,  ['id' => $order->id])}}">
-                                    <button class="btn btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i> Remove</button>
+                                    <button class="btn btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i> @lang('main.remove')</button>
                                 </a>
 
 
                                 <a href="{{route('admin.orders.show_details' ,  ['id' => $order->id])}}">
-                                    <button class="btn btn-sm btn-primary"><i class="nav-icon fas fa-eye"></i> Show</button>
+                                    <button class="btn btn-sm btn-primary"><i class="nav-icon fas fa-eye"></i> @lang('main.show')</button>
                                 </a>
 
                                 <a href="{{route('admin.orders.edit_status' ,  ['id' => $order->id])}}">
-                                    <button class="btn btn-sm btn-primary"><i class="nav-icon fas fa-eye"></i> Edit Status</button>
+                                    <button class="btn btn-sm btn-primary"><i class="nav-icon fas fa-eye"></i> @lang('main.edit_status')</button>
                                 </a>
 
                             </td>
@@ -104,7 +104,7 @@
                         </tr>
                     @empty
                             <tr>
-                                <td colspan="3"> No Data</td>
+                                <td colspan="3"> @lang('main.no_data')</td>
                             </tr>
                     @endforelse
 

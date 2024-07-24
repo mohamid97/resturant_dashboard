@@ -8,12 +8,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                    <h1>Cart Details</h1>
+                    <h1>@lang('sidebar.cart_details') </h1>
                     </div>
                     <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Card Details</li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">@lang('main.home') </a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.cart_details') </li>
                     </ol>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
     <div class="row">
     <div class="col-12">
         <div class="callout callout-info">
-            <h5><i class="fas fa-info"></i> Details OF:</h5>
+            <h5><i class="fas fa-info"></i> @lang('main.details_of'):</h5>
             {{ $cart->user->first_name .' '. $cart->user->last_name }}
         </div>
     
@@ -33,8 +33,8 @@
             <div class="row">
                 <div class="col-12">
                     <h4>
-                    <i class="fas fa-user"></i> General Information
-                    <small class="float-right">Date: {{$cart->created_at }}</small>
+                    <i class="fas fa-user"></i> @lang('main.general_information')
+                    <small class="float-right"> @lang('main.date'): {{$cart->created_at }}</small>
                     </h4>
                 </div>
             
@@ -42,22 +42,22 @@
     
         <div class="row invoice-info">
             <div class="col-sm-4 invoice-col">
-               <strong> User Information </strong>
+               <strong> @lang('main.user_information')</strong>
                 <address>
-                Name: {{ $cart->user->first_name .' '. $cart->user->last_name }}<br>
-                Phone: {{ $cart->user->phone }}<br>
-                Email: {{ $cart->user->email }}
+                    @lang('main.name'): {{ $cart->user->first_name .' '. $cart->user->last_name }}<br>
+                    @lang('main.phone'): {{ $cart->user->phone }}<br>
+                    @lang('main.email'): {{ $cart->user->email }}
                 </address>
             </div>
 
 
             <div class="col-sm-4 invoice-col">
             
-                <strong>Card Details</strong>
+                <strong>@lang('sidebar.cart_details')</strong>
                 <address>
                 
-                Total Price: {{ $total_price}} EGP<br>
-                Total Quantity : {{ $totla_quantity }} <br>
+                    @lang('main.total_price'): {{ $total_price}} EGP<br>
+                    @lang('main.total_quntity'): {{ $totla_quantity }} <br>
                 
                 </address>
             </div>
@@ -75,11 +75,11 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Gallery</th>
-                        <th>Product Name</th>
-                        <th>Price</th>
-                        <th>Quntity</th>
-                        <th>Total</th>
+                        <th>@lang('main.gallery')</th>
+                        <th>@lang('sidebar.product_name')</th>
+                        <th>@lang('main.price')</th>
+                        <th> @lang('main.quntity')</th>
+                        <th> @lang('main.total')</th>
                     
                     </tr>
                     </thead>
@@ -118,13 +118,13 @@
                                     <span class="carousel-control-custom-icon" aria-hidden="true">
                                     <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="sr-only">Previous</span>
+                                    <span class="sr-only">@lang('main.previous')</span>
                                     </a>
                                     <a class="carousel-control-next" href="#carouselExampleIndicators{{ $index + 1 }}" role="button" data-slide="next">
                                     <span class="carousel-control-custom-icon" aria-hidden="true">
                                     <i class="fas fa-chevron-right"></i>
                                     </span>
-                                    <span class="sr-only">Next</span>
+                                    <span class="sr-only">@lang('main.next')</span>
                                     </a>
                                     </div>
                                     </div>
@@ -136,15 +136,11 @@
 
 
 
-
-
-
-
                         </td>
                         <td>{{ $item->product->translations[0]->name }}</td>
                         <td>{{ $item->product->price }}</td>
                         <td>{{ $item->quantity }}</td>
-                        <td>{{ $item->quantity  * $item->product->price  }} EGP</td>
+                        <td>{{ $item->quantity  * $item->product->price  }} @lang('main.egp')</td>
                     </tr>
                     @endforeach
 

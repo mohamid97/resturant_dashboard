@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Points Price</h1>
+                    <h1>@lang('sidebar.points_price') </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Points Price </li>
+                        <li class="breadcrumb-item"><a href="#">@lang('main.home') </a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.points_price') </li>
                     </ol>
                 </div>
             </div>
@@ -22,7 +22,7 @@
 
             <div class="card card-info">
                 <div class="card-header">
-                    <h3 class="card-title">Points Price</h3>
+                    <h3 class="card-title">@lang('sidebar.points_price')</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -33,8 +33,8 @@
                         <div class="border  p-3">
                     
                             <div class="form-group">
-                                <label for="points">Points </label>
-                                <input type="number" name="points" class="form-control" id="points" placeholder="Enter points" value="{{isset($point->num_points)?$point->num_points:''}}">
+                                <label for="points">@lang('sidebar.points') </label>
+                                <input type="number" name="points" class="form-control" id="points" placeholder="@lang('plachoder.enter_points') " value="{{isset($point->num_points)?$point->num_points:''}}">
                                 @error('points')
                                 <div class="text-danger">{{ $errors->first('points') }}</div>
                                 @enderror
@@ -47,8 +47,8 @@
                         <div class="border  p-3">
                     
                             <div class="form-group">
-                                <label for="points">Pounds </label>
-                                <input type="number" name="pounds" class="form-control" id="Pounds" placeholder="Enter Pounds" value="{{isset($point->num_pounds)?$point->num_pounds:''}}">
+                                <label for="points">@lang('main.pounds') </label>
+                                <input type="number" name="pounds" class="form-control" id="Pounds" placeholder="@lang('plachoder.enter_pounds')" value="{{isset($point->num_pounds)?$point->num_pounds:''}}">
                                 @error('Pounds')
                                 <div class="text-danger">{{ $errors->first('Pounds') }}</div>
                                 @enderror
@@ -62,8 +62,8 @@
                         <div class="border  p-3">
                     
                             <div class="form-group">
-                                <label for="order_amount">Order Amount </label>
-                                <input type="text" name="order_amount" class="form-control" id="order_amount" placeholder="Enter order_amount" value="{{isset($point->order_amount)?$point->order_amount:''}}">
+                                <label for="order_amount">@lang('main.order_amount') </label>
+                                <input type="text" name="order_amount" class="form-control" id="order_amount" placeholder="@lang('plachoder.enter_order_amount')" value="{{isset($point->order_amount)?$point->order_amount:''}}">
                                 @error('order_amount')
                                 <div class="text-danger">{{ $errors->first('order_amount') }}</div>
                                 @enderror
@@ -75,8 +75,8 @@
                         <div class="border  p-3">
                     
                             <div class="form-group">
-                                <label for="order_points">Order Points </label>
-                                <input type="number" name="order_points" class="form-control" id="order_points" placeholder="Enter order_points" value="{{isset($point->order_points)?$point->order_points:''}}">
+                                <label for="order_points">@lang('main.order_points') </label>
+                                <input type="number" name="order_points" class="form-control" id="order_points" placeholder="@lang('plachoder.enter_order_amount')" value="{{isset($point->order_points)?$point->order_points:''}}">
                                 @error('order_points')
                                 <div class="text-danger">{{ $errors->first('order_points') }}</div>
                                 @enderror
@@ -99,7 +99,7 @@
 
 
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> Update</button>
+                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> @lang('main.update')</button>
                     </div>
 
 

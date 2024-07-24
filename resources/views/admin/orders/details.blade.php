@@ -8,12 +8,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                    <h1>Order Details</h1>
+                    <h1>@lang('sidebar.order_details') </h1>
                     </div>
                     <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Order Details</li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">@lang('main.home') </a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.orders') </li>
                     </ol>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
     <div class="row">
     <div class="col-12">
         <div class="callout callout-info">
-            <h5><i class="fas fa-info"></i> Details OF:</h5>
+            <h5><i class="fas fa-info"></i> @lang('main.details_of') :</h5>
             {{ $order->user->first_name .' '. $order->user->last_name }}
         </div>
     
@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-12">
                     <h4>
-                    <i class="fas fa-user"></i> General Information
+                    <i class="fas fa-user"></i> @lang('main.general_information')
                     <small class="float-right">Date: {{$order->created_at }}</small>
                     </h4>
                 </div>
@@ -42,24 +42,24 @@
     
         <div class="row invoice-info">
             <div class="col-sm-4 invoice-col">
-               <strong> User Information </strong>
+               <strong> @lang('main.user_information') </strong>
                 <address>
-                Name: {{ $order->user->first_name .' '. $order->user->last_name }}<br>
-                Phone: {{ $order->user->phone }}<br>
-                Email: {{ $order->user->email }}
+                    @lang('main.name'): {{ $order->user->first_name .' '. $order->user->last_name }}<br>
+                    @lang('main.phone'): {{ $order->user->phone }}<br>
+                    @lang('main.email'): {{ $order->user->email }}
                 </address>
             </div>
 
 
             <div class="col-sm-4 invoice-col">
             
-                <strong>Order Details</strong>
+                <strong>@lang('sidebar.order_details')</strong>
                 <address>
                 
-                Total Price: {{ $total_price}} EGP<br>
-                Total Quantity : {{ $total_quantity }} <br>
-                City           : {{ $order_city_price->name}} <br>
-                Shiping Price  : {{ isset($order_city_price->price->price) ? $order_city_price->price->price : '0 EGP'  }}
+                    @lang('main.total_price'): {{ $total_price}} @lang('main.egp')<br>
+                    @lang('main.total_quntity') : {{ $total_quantity }} <br>
+                    @lang('main.city')           : {{ $order_city_price->name}} <br>
+                    @lang('main.shiping_price')  : {{ isset($order_city_price->price->price) ? $order_city_price->price->price : '0 EGP'  }}
                 
                 </address>
             </div>
@@ -68,12 +68,12 @@
 
             <div class="col-sm-4 invoice-col">
             
-                <strong>Order Payment</strong>
+                <strong>@lang('sidebar.order_payment') </strong>
                 <address>
                 
-                Status: {{ $order->status }}<br>
-                Payment Status : {{ $order->payment_status }} <br>
-                Payment Method : {{ $order->payment_method }} <br>
+                    @lang('main.status'): {{ $order->status }}<br>
+                    @lang('main.payment_status') : {{ $order->payment_status }} <br>
+                    @lang('main.payment_status') : {{ $order->payment_method }} <br>
 
                 
                 </address>
@@ -92,11 +92,11 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Gallery</th>
-                        <th>Product Name</th>
-                        <th>Price</th>
-                        <th>Quntity</th>
-                        <th>Total</th>
+                        <th>   @lang('main.gallery')</th>
+                        <th>   @lang('sidebar.product_name')</th>
+                        <th>   @lang('main.price')</th>
+                        <th>   @lang('main.quntity')</th>
+                        <th>   @lang('main.total')</th>
                     
                     </tr>
                     </thead>
@@ -137,13 +137,13 @@
                                     <span class="carousel-control-custom-icon" aria-hidden="true">
                                     <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="sr-only">Previous</span>
+                                    <span class="sr-only"> @lang('main.previous')</span>
                                     </a>
                                     <a class="carousel-control-next" href="#carouselExampleIndicators{{ $index + 1 }}" role="button" data-slide="next">
                                     <span class="carousel-control-custom-icon" aria-hidden="true">
                                     <i class="fas fa-chevron-right"></i>
                                     </span>
-                                    <span class="sr-only">Next</span>
+                                    <span class="sr-only"> @lang('main.next')</span>
                                     </a>
                                     </div>
                                     </div>
@@ -163,7 +163,7 @@
                         <td>{{ $item->product->translations[0]->name }}</td>
                         <td>{{ $item->product->price }}</td>
                         <td>{{ $item->quantity }}</td>
-                        <td>{{ $item->quantity  * $item->product->price  }} EGP</td>
+                        <td>{{ $item->quantity  * $item->product->price  }}  @lang('main.egp')</td>
                     </tr>
                     @endforeach
 

@@ -625,7 +625,7 @@
                     <a href="#" class="nav-link">
                         <i class="fas fa-hand-holding-usd"></i>
                         <p>
-                            Coupons
+                            @lang('sidebar.coupons')
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -634,7 +634,7 @@
                         <li class="nav-item">
                             <a href="{{route('admin.coupons.index')}}" class="nav-link">
                                 <i class="fas fa-hand-holding-usd"></i>
-                                <p> Coupons </p>
+                                <p>    @lang('sidebar.coupons') </p>
                             </a>
                         </li>
 
@@ -642,7 +642,7 @@
                         <li class="nav-item">
                             <a href="{{route('admin.coupons.add')}}" class="nav-link">
                                 <i class="fa fa-plus nav-icon"></i>
-                                <p> Add </p>
+                                <p>    @lang('main.add') </p>
                             </a>
                         </li>
 
@@ -657,7 +657,7 @@
                     <a href="#" class="nav-link">
                         <i class="fas fa-coins"></i>
                         <p>
-                            Points
+                            @lang('sidebar.points') 
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -666,7 +666,7 @@
                         <li class="nav-item">
                             <a href="{{route('admin.points.index')}}" class="nav-link">
                                 <i class="fas fa-coins"></i>
-                                <p> Points </p>
+                                <p> @lang('sidebar.points')  </p>
                             </a>
                         </li>
 
@@ -688,7 +688,7 @@
                 <a href="#" class="nav-link">
                     <i class="fa fa-shopping-cart nav-icon"></i>
                     <p>
-                        Cards
+                        @lang('sidebar.carts') 
                         <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
@@ -697,7 +697,7 @@
                     <li class="nav-item">
                         <a href="{{route('admin.cards.index')}}" class="nav-link">
                             <i class="fa fa-shopping-cart nav-icon"></i>
-                            <p> Cards </p>
+                            <p> @lang('sidebar.carts')  </p>
                         </a>
                     </li>
 
@@ -715,7 +715,7 @@
                 <a href="#" class="nav-link">
                     <i class="fa fa-shopping-cart nav-icon"></i>
                     <p>
-                        Orders
+                        @lang('sidebar.orders') 
                         <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
@@ -724,7 +724,7 @@
                     <li class="nav-item">
                         <a href="{{route('admin.orders.index')}}" class="nav-link">
                             <i class="fa fa-shopping-cart nav-icon"></i>
-                            <p> Orders </p>
+                            <p> @lang('sidebar.orders')  </p>
                         </a>
                     </li>
 
