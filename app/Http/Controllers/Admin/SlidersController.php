@@ -20,6 +20,7 @@ class SlidersController extends Controller
     public function __construct()
     {
         $this->langs = Lang::all();
+    
     }
 
     //

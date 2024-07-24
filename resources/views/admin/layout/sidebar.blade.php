@@ -14,7 +14,24 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav mr-auto-navbav">
 
+        {{-- <div class="form-group">
+            <select class="form-control">
+            <option> <a href="{{ route('change_direction' , ['lang'=>'en']) }}">English</a></option>
+            <option> <a href="{{ route('change_direction' , ['lang'=>'ar']) }}">العربيه</a></option>
 
+            </select>
+        </div> --}}
+
+        <div class="input-group-prepend">
+            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="background-color: #17a2b8;color:#FFF">
+                {{ ( app()->getLocale() ) == 'en' ? 'English':'العربيه' }}
+            </button>
+            <ul class="dropdown-menu" style="left:30px !important">
+
+                <li class="dropdown-item" {{ ( app()->getLocale() ) == 'en' ? 'selected':'' }}> <a href="{{ route('change_direction' , ['lang'=>'en']) }}" >English</a></li>
+                <li class="dropdown-item" {{ ( app()->getLocale() ) == 'ar' ? 'selected':'' }}><a href="{{ route('change_direction' , ['lang'=>'ar']) }}" >العربيه</a></li>
+            </ul>
+            </div>
 
     </ul>
 </nav>
@@ -26,7 +43,7 @@
     <a href="{{route('admin.index')}}" class="brand-link">
         <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">Cangrow</span>
     </a>
 
     <!-- Sidebar -->
@@ -51,7 +68,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-image"></i>
                                 <p>
-                                    Sliders
+                                    @lang('sidebar.sliders')
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -59,13 +76,13 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.sliders.index')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Sliders</p>
+                                        <p>@lang('sidebar.sliders')</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('admin.sliders.add')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Add</p>
+                                        <p>@lang('main.add')</p>
                                     </a>
                                 </li>
 
@@ -73,7 +90,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.sliders.setting')}}" class="nav-link">
                                         <i class="fa fa-cog nav-icon"></i>
-                                        <p>Setting</p>
+                                        <p>@lang('main.setting')</p>
                                     </a>
                                 </li>
 
@@ -574,7 +591,8 @@
                         <a href="#" class="nav-link">
                             <i class="fa fa-newspaper nav-icon"></i>
                             <p>
-                                offers
+                                @lang('sidebar.offers')
+
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -583,7 +601,7 @@
                             <li class="nav-item">
                                 <a href="{{route('admin.offers.index')}}" class="nav-link">
                                     <i class="fa fa-newspaper nav-icon"></i>
-                                    <p> offers </p>
+                                    <p>  @lang('sidebar.offers') </p>
                                 </a>
                             </li>
 
@@ -591,7 +609,7 @@
                             <li class="nav-item">
                                 <a href="{{route('admin.offers.add')}}" class="nav-link">
                                     <i class="fa fa-plus nav-icon"></i>
-                                    <p> Add </p>
+                                    <p>  @lang('main.add') </p>
                                 </a>
                             </li>
 
@@ -637,7 +655,7 @@
             @if($settings->points)
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
-                        <i class="fas fa-hand-holding-usd"></i>
+                        <i class="fas fa-coins"></i>
                         <p>
                             Points
                             <i class="right fas fa-angle-left"></i>
@@ -647,7 +665,7 @@
 
                         <li class="nav-item">
                             <a href="{{route('admin.points.index')}}" class="nav-link">
-                                <i class="fas fa-hand-holding-usd"></i>
+                                <i class="fas fa-coins"></i>
                                 <p> Points </p>
                             </a>
                         </li>
@@ -709,8 +727,6 @@
                             <p> Orders </p>
                         </a>
                     </li>
-
-
 
 
                 </ul>

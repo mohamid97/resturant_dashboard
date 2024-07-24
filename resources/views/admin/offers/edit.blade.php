@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Update Offer</h1>
+                    <h1>@lang('sidebar.edit_offer')</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Update Offfer </li>
+                        <li class="breadcrumb-item"><a href="#">@lang('main.home')</a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.edit_offer')</li>
                     </ol>
                 </div>
             </div>
@@ -22,7 +22,7 @@
 
             <div class="card card-info">
                 <div class="card-header">
-                    <h3 class="card-title">Offer</h3>
+                    <h3 class="card-title">@lang('sidebar.offer')</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -33,8 +33,8 @@
                         <div class="border  p-3">
                         @foreach($langs as $lang)
                             <div class="form-group">
-                                <label for="title">Title ({{ $lang->name }}) </label>
-                                <input type="text" name="title[{{$lang->code}}]" class="form-control" id="title" placeholder="Enter Title" value=" {{isset($offer->translate($lang->code)->title) ? $offer->translate($lang->code)->title : ''}} ">
+                                <label for="title">@lang('main.title') ({{ $lang->name }}) </label>
+                                <input type="text" name="title[{{$lang->code}}]" class="form-control" id="title" placeholder="@lang('plachoder.enter_title')" value=" {{isset($offer->translate($lang->code)->title) ? $offer->translate($lang->code)->title : ''}} ">
                                 @error('title.' . $lang->code)
                                 <div class="text-danger">{{ $errors->first('title.' . $lang->code) }}</div>
                                 @enderror
@@ -54,8 +54,8 @@
 
 
                                 <div class="form-group">
-                                    <label for="small_des">Small Description ({{$lang->name}})</label>
-                                    <input name="small_des[{{$lang->code}}]" class="form-control" value="{{isset($offer->translate($lang->code)->small_des) ? $offer->translate($lang->code)->small_des :''}}"/>
+                                    <label for="small_des">@lang('main.small_des') ({{$lang->name}})</label>
+                                    <input placeholder="@lang('plachoder.enter_small_des')" name="small_des[{{$lang->code}}]" class="form-control" value="{{isset($offer->translate($lang->code)->small_des) ? $offer->translate($lang->code)->small_des :''}}"/>
 
 
                                     @error('small_des.' . $lang->code)
@@ -71,7 +71,7 @@
 
 
                             <div class="form-group">
-                                <label for="image">Description ({{$lang->name}})</label>
+                                <label for="image">@lang('main.des') ({{$lang->name}})</label>
                                 <textarea name="des[{{$lang->code}}]" class="ckeditor">
                                     @if (isset($offer->translate($lang->code)->des))
                                     {!! $offer->translate($lang->code)->des !!}  
@@ -93,14 +93,14 @@
 
 
                         <div class="form-group">
-                            <label for="image">Image</label>
+                            <label for="image">@lang('main.image')</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input name="image" type="file" class="custom-file-input" id="image">
                                     <label class="custom-file-label" for="image">Choose Image</label>
                                 </div>
                                 <div class="input-group-append">
-                                    <span class="input-group-text" id="">Upload</span>
+                                    <span class="input-group-text" id="">@lang('main.upload')</span>
                                 </div>
                             </div>
                             <img src="{{asset('uploads/images/offers/'. $offer->image)}}" width="150px" height="150px">
@@ -113,8 +113,8 @@
 
 
                         <div class="form-group">
-                            <label for="price">Price  </label>
-                            <input type="text" name="price" class="form-control" id="price" placeholder="Enter Price" value="{{$offer->price }}">
+                            <label for="price">@lang('main.price')  </label>
+                            <input type="text" name="price" class="form-control" id="price" placeholder="@lang('plachoder.enter_price')" value="{{$offer->price }}">
                             @error('price')
                             <div class="text-danger">{{ $errors->first('price') }}</div>
                             @enderror
@@ -122,8 +122,8 @@
 
 
                      <div class="form-group">
-                        <label for="old_price">Old Price  </label>
-                        <input type="text" name="old_price" class="form-control" id="old_price" placeholder="Enter Old Price" value="{{ $offer->old_price }}">
+                        <label for="old_price">@lang('main.old_price')  </label>
+                        <input type="text" name="old_price" class="form-control" id="old_price" placeholder="@lang('plachoder.enter_old_price')" value="{{ $offer->old_price }}">
                         @error('old_price')
                         <div class="text-danger">{{ $errors->first('old_price') }}</div>
                         @enderror
@@ -138,7 +138,7 @@
 
 
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> Submit</button>
+                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> @lang('main.update')</button>
                     </div>
 
 

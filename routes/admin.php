@@ -36,6 +36,8 @@ use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\PointsController;
 use App\Models\Admin\Payment;
 use Illuminate\Routing\RouteRegistrar;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 Route::get('/mig' , function (){
     \Artisan::call("migrate --path='database/migrations/2024_04_08_073608_add_messages_to_table_name.php'");
@@ -47,10 +49,18 @@ Route::post('/login', [AuthController::class,'login'])->name('login');
 
 
 
+    // change language 
+Route::get('chang_lang/{lang}' , function($lang){
 
+    App::setLocale($lang);
+    Session::put('locale', $lang);
+    return redirect()->back();
+})->name('change_direction');
 
-Route::middleware('checkIfAdmin')->prefix('admin')->group(function (){
+Route::middleware(['checkIfAdmin' , 'checkLocale'])->prefix('admin')->group(function (){
     Route::get('/' , [HomeController::class , 'index'])->name('admin.index');
+
+
 
     // login and regsiter
 
