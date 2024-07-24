@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Social Media </h1>
+                    <h1>@lang('sidebar.social_media') </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Social Media </li>
+                        <li class="breadcrumb-item"><a href="#">@lang('main.home')</a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.social_media') </li>
                     </ol>
                 </div>
             </div>
@@ -22,7 +22,7 @@
 
             <div class="card card-info">
                 <div class="card-header">
-                    <h3 class="card-title">Social Media </h3>
+                    <h3 class="card-title">@lang('sidebar.social_media')</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -30,7 +30,7 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="facebook">FaceBook</label>
+                            <label for="facebook">@lang('main.facebook')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="facebook" class="form-control" id="facebook" placeholder="Enter facebook" value="{{ $social->facebook }}">
@@ -52,7 +52,7 @@
 
 
                         <div class="form-group">
-                            <label for="twitter">Twitter</label>
+                            <label for="twitter">@lang('main.twitter')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="twitter" class="form-control" id="twitter" placeholder="Enter Twitter" value="{{ $social->twitter }}">
@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="linkedin">Linkedin</label>
+                            <label for="linkedin">@lang('main.linkedin')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="linkedin" class="form-control" id="linkedin" placeholder="Enter Linkedin" value="{{ $social->linkedin }}">
@@ -89,7 +89,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="twitter">Instagram</label>
+                            <label for="twitter">@lang('main.instagram')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="instagram" class="form-control" id="instagram" placeholder="Enter Instagram" value="{{ $social->instagram }}">
@@ -112,7 +112,7 @@
 
 
                         <div class="form-group">
-                            <label for="youtube">Youtube</label>
+                            <label for="youtube">@lang('main.youtube')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="youtube" class="form-control" id="youtube" placeholder="Enter Youtube" value="{{ $social->youtube }}">
@@ -135,7 +135,7 @@
 
 
                         <div class="form-group">
-                            <label for="snapchat">Snapchat</label>
+                            <label for="snapchat">@lang('main.snapchat')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="snapchat" class="form-control" id="snapchat" placeholder="Enter snapchat" value="{{ $social->snapchat }}">
@@ -159,7 +159,7 @@
 
 
                         <div class="form-group">
-                            <label for="twitter">Tiktok</label>
+                            <label for="twitter">@lang('main.tiktok')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="tiktok" class="form-control" id="tiktok" placeholder="Enter Tiktok" value="{{ $social->instagram }}">
@@ -180,7 +180,7 @@
 
 
                         <div class="form-group">
-                            <label for="twitter">Skype</label>
+                            <label for="twitter">@lang('main.skype')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="skype" class="form-control" id="tiktok" placeholder="Enter skype" value="{{ $social->skype }}">
@@ -202,7 +202,7 @@
 
 
                         <div class="form-group">
-                            <label for="whatsup">Whatsup</label>
+                            <label for="whatsup">@lang('main.whatsup')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="whatsup" class="form-control" id="whatsup" placeholder="Enter Whatsup" value="{{ $social->whatsup }}">
@@ -223,7 +223,7 @@
 
 
                         <div class="form-group">
-                            <label for="whatsup">Email</label>
+                            <label for="whatsup">@lang('main.email')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="email" class="form-control" id="email" placeholder="Enter Email" value="{{ $social->email }}">
@@ -243,7 +243,7 @@
 
 
                         <div class="form-group">
-                            <label for="phone">Phone</label>
+                            <label for="phone">@lang('main.phone')</label>
                             <div class="row">
                                 <div class="col-md-8">
                                     <input type="text" name="phone" class="form-control" id="phone" placeholder="Enter Phone" value="{{ $social->phone }}">
@@ -268,7 +268,7 @@
 
 
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> Update</button>
+                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> @lang('main.update')</button>
                     </div>
 
 

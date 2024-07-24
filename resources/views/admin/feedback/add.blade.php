@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Add Feedback</h1>
+                    <h1>@lang('sidebar.feedbacks')</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Feedbacks </li>
+                        <li class="breadcrumb-item"><a href="#">@lang('main.home')</a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.feedbacks') </li>
                     </ol>
                 </div>
             </div>
@@ -22,7 +22,7 @@
 
             <div class="card card-info">
                 <div class="card-header">
-                    <h3 class="card-title">Feedback</h3>
+                    <h3 class="card-title">@lang('sidebar.feedback')</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -32,8 +32,8 @@
                         <div class="border p-3">
                             @foreach($langs as $lang)
                                 <div class="form-group">
-                                    <label for="name">Name ({{ $lang->name }}) </label>
-                                    <input type="text" name="name[{{$lang->code}}]" class="form-control" id="name" placeholder="Enter Name" value="{{ old('name.' . $lang->code) }}">
+                                    <label for="name">@lang('main.name') ({{ $lang->name }}) </label>
+                                    <input type="text" name="name[{{$lang->code}}]" class="form-control" id="name" placeholder="@lang('plachoder.enter_name')" value="{{ old('name.' . $lang->code) }}">
                                     @error('name.' . $lang->code)
                                     <div class="text-danger">{{ $errors->first('name.' . $lang->code) }}</div>
                                     @enderror
@@ -47,8 +47,8 @@
                         <div class="border p-3">
                             @foreach($langs as $lang)
                                 <div class="form-group">
-                                    <label for="small_des">Small des ({{ $lang->name }}) </label>
-                                    <input type="text" name="small_des[{{$lang->code}}]" class="form-control" id="small_des" placeholder="Enter Small Description" value="{{ old('name.' . $lang->code) }}">
+                                    <label for="small_des">@lang('main.small_des') ({{ $lang->name }}) </label>
+                                    <input type="text" name="small_des[{{$lang->code}}]" class="form-control" id="small_des" placeholder="@lang('plachoder.enter_small_des')" value="{{ old('name.' . $lang->code) }}">
                                     @error('small_des.' . $lang->code)
                                     <div class="text-danger">{{ $errors->first('small_des.' . $lang->code) }}</div>
                                     @enderror
@@ -62,8 +62,8 @@
                         <div class="border p-3">
                             @foreach($langs as $lang)
                                 <div class="form-group">
-                                    <label for="des"> Description ({{ $lang->name }}) </label>
-                                    <textarea class="ckeditor"  type="text" name="des[{{$lang->code}}]" class="form-control" id="des" placeholder="Enter Description">
+                                    <label for="des"> @lang('main.des')  ({{ $lang->name }}) </label>
+                                    <textarea class="ckeditor"  type="text" name="des[{{$lang->code}}]" class="form-control" id="des" placeholder="@lang('plachoder.enter_des') ">
                                         {{ old('name.' . $lang->code) }}
                                     </textarea>
                                     @error('des.' . $lang->code)
@@ -80,14 +80,14 @@
 
 
                         <div class="form-group">
-                            <label for="image">Image</label>
+                            <label for="image">@lang('main.image')</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input name="image" type="file" class="custom-file-input" id="image">
                                     <label class="custom-file-label" for="image">Choose Image</label>
                                 </div>
                                 <div class="input-group-append">
-                                    <span class="input-group-text" id="">Upload</span>
+                                    <span class="input-group-text" id="">@lang('main.upload')</span>
                                 </div>
                             </div>
 
@@ -100,14 +100,14 @@
 
                         
                         <div class="form-group">
-                            <label for="icon">Icon</label>
+                            <label for="icon">@lang('main.icon')</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input name="icon" type="file" class="custom-file-input" id="icon">
                                     <label class="custom-file-label" for="image">Choose Icon</label>
                                 </div>
                                 <div class="input-group-append">
-                                    <span class="input-group-text" id="">Upload</span>
+                                    <span class="input-group-text" id="">@lang('main.upload')</span>
                                 </div>
                             </div>
 
@@ -117,18 +117,12 @@
                         </div>
 
 
-
-
-
-
-
-
                     </div>
 
 
 
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> Submit</button>
+                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> @lang('main.submit')</button>
                     </div>
 
 

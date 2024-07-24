@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Show Messages</h1>
+                    <h1>@lang('sidebar.show_messages')</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Show Messages</li>
+                        <li class="breadcrumb-item"><a href="#">@lang('main.home')</a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.show_messages')</li>
                     </ol>
                 </div>
             </div>
@@ -31,7 +31,7 @@
             <p>{{$msg->message}}</p>
 
             <button class="btn btn-danger ms-auto">
-                <a href="" style="color: #FFF;" > <i class="nav-icon fas fa-trash"></i>  Remove</a>
+                <a href="" style="color: #FFF;" > <i class="nav-icon fas fa-trash"></i>  @lang('main.remove')</a>
             </button>
         </div>
 

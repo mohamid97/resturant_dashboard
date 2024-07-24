@@ -33,6 +33,31 @@ return [
     'order_details'=>'Order Details',
     'order_details'=>'Orders Details',
     'order_payment'=>'Order Payment',
+    'city_price'=>'City Price',
+    'gov_arabic'=>'Government Arabic',
+    'gov_english'=>'Government English',
+    'city_arabic'=>'City Arabic',
+    'city_english'=>'City English',
+    'all_city_price'=>'All City Price',
+    'messages'=>'Messages',
+    'message_from_contact'=>'Messages From Contacts',
+    'all_messages'=>'All Messages',
+    'show_messages'=>'Show Messages',
+    'feedbacks'=>'Feedbacks',
+    'add_new_feedback'=>'Add New Feedback',
+    'edit_feedback'=>'Edit Feedback',
+    'feedback'=>'Feedback',
+    'all_feedbacks'=>'All Feedbacks',
+    'about_us'=>'About Us',
+    'contact_us'=>'Contact Us',
+    'social_media'=>'Social Media',
+    'our_client'=>'Our Clients',
+    'clients'=>'Clients',
+    'add_clients'=>'Add Client',
+    'all_clients'=>'All Clients',
+    'edit_client'=>'Edit Client',
+
+
 
     
     

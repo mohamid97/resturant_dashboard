@@ -18,12 +18,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>City Price </h1>
+                    <h1>@lang('sidebar.city_price') </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                        <li class="breadcrumb-item active">City Price</li>
+                        <li class="breadcrumb-item"><a href="{{route('admin.index')}}">@lang('main.home') </a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.city_price') </li>
                     </ol>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <div class="card card-info">
 
                 <div class="card-header">
-                    <h3 class="card-title">All City Price</h3>
+                    <h3 class="card-title">@lang('sidebar.all_city_price')</h3>
 
                 </div>
                 <!-- /.card-header -->
@@ -45,12 +45,12 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Government Arabic </th>
-                            <th>Government English </th>
-                            <th>City Arabic</th>
-                            <th>City English</th>
-                            <th>Price</th>
-                            <th>Action</th>
+                            <th>@lang('sidebar.gov_arabic') </th>
+                            <th>@lang('sidebar.gov_english')</th>
+                            <th>@lang('sidebar.city_arabic')</th>
+                            <th>@lang('sidebar.city_english')</th>
+                            <th>@lang('main.price')</th>
+                            <th>@lang('main.action')</th>
 
                         </tr>
                         </thead>

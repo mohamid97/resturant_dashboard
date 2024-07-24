@@ -71,6 +71,27 @@ return [
     'edit_status'=>'Edit Status',
     'city'=>'City',
     'shiping_price'=>'Shiping Price',
+    'edit_price'=>'Edit Price',
+    'subject'=>'Subject',
+    'icon'=>'icon',
+    'all'=>'All',
+    'meta_title'=>'Meta Title',
+    'meta_des'=>'Meta Description',
+    'address'=>'Address',
+    'address2'=>'Address 2',
+    'facebook'=>'Facebook',
+    'twitter'=>'Twitter',
+    'linkedin'=>'Linkedin',
+    'instagram'=>'Instagram',
+    'youtube'=>'Youtube',
+    'snapchat'=>'Snapchat',
+    'tiktok'=>'Tiktok',
+    'skype'=>'Skype',
+    'whatsup'=>'Whatsup',
+    'email'=>'Email',
+    'phone'=>'Phone'
+    
+
 
 
 

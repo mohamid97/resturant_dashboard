@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Messages From Contacts </h1>
+                    <h1>@lang('sidebar.message_from_contact')</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                        <li class="breadcrumb-item active">Messages</li>
+                        <li class="breadcrumb-item"><a href="{{route('admin.index')}}">@lang('main.home')</a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.messages')</li>
                     </ol>
                 </div>
             </div>
@@ -23,7 +23,7 @@
             <div class="card card-info">
 
                 <div class="card-header">
-                    <h3 class="card-title">All Messages</h3>
+                    <h3 class="card-title">@lang('sidebar.all_messages')</h3>
 
                 </div>
                 <!-- /.card-header -->
@@ -32,11 +32,11 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Subject</th>
-                            <th>Action</th>
+                            <th>@lang('main.name')</th>
+                            <th>@lang('main.phone')</th>
+                            <th>@lang('main.email')</th>
+                            <th>@lang('main.subject')</th>
+                            <th>@lang('main.action')</th>
 
                         </tr>
                         </thead>
@@ -61,11 +61,11 @@
                                 </td>
                                 <td>
                                     <a href="{{route('admin.messages.show' ,  ['id' => $msg->id])}}">
-                                        <button class="btn btn-sm btn-info"> <i class="nav-icon fas fa-edit"></i> Show</button>
+                                        <button class="btn btn-sm btn-info"> <i class="nav-icon fas fa-edit"></i> @lang('main.show')</button>
                                     </a>
 
                                     <a href="{{route('admin.messages.destroy' ,  ['id' => $msg->id])}}">
-                                        <button class="btn btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i> Remove</button>
+                                        <button class="btn btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i> @lang('main.remove')</button>
                                     </a>
 
                                 </td>
@@ -73,7 +73,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="3"> No Data</td>
+                                <td colspan="3"> @lang('main.no_data')</td>
                             </tr>
                         @endforelse
 

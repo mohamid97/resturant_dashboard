@@ -105,7 +105,7 @@
                                 <a href="#" class="nav-link">
                                     <i class="fa fa-comments nav-icon"></i>
                                     <p>
-                                        Messages
+                                        @lang('sidebar.messages')
                                         <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
@@ -114,7 +114,7 @@
                                     <li class="nav-item">
                                         <a href="{{route('admin.messages.index')}}" class="nav-link">
                                             <i class="fa fa-language nav-icon"></i>
-                                            <p>  All </p>
+                                            <p>  @lang('sidebar.messages') </p>
                                         </a>
                                     </li>
 
@@ -132,7 +132,7 @@
                             <a href="#" class="nav-link">
                                 <i class="fa fa-comments nav-icon"></i>
                                 <p>
-                                    Feedbacks
+                                    @lang('sidebar.feedbacks')
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -141,7 +141,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.feedback.index')}}" class="nav-link">
                                         <i class="fa fa-language nav-icon"></i>
-                                        <p>  All </p>
+                                        <p>  @lang('main.all') </p>
                                     </a>
                                 </li>
 
@@ -150,7 +150,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.feedback.index')}}" class="nav-link">
                                         <i class="fa fa-plus nav-icon"></i>
-                                        <p>  Add </p>
+                                        <p>  @lang('main.add') </p>
                                     </a>
                                 </li>
 
@@ -170,7 +170,7 @@
                             <a href="#" class="nav-link">
                                 <i class="far fa-address-card nav-icon"></i>
                                 <p>
-                                   About Us
+                                    @lang('sidebar.about_us')
                                    <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -178,7 +178,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.about.index')}}" class="nav-link">
                                     <i class="far fa-address-card nav-icon"></i>
-                                    <p>About Us</p>
+                                    <p> @lang('sidebar.about_us') </p>
                                     </a>
                                 </li>
                             </ul>
@@ -189,7 +189,7 @@
                         <a href="#" class="nav-link">
                             <i class="fa fa-phone-volume"></i>
                             <p>
-                            Contact Us
+                                @lang('sidebar.contact_us')
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -197,7 +197,7 @@
                     <li class="nav-item">
                         <a href="{{route('admin.contact.index')}}" class="nav-link">
                             <i class="far fa-volume-control-phone nav-icon"></i>
-                            <p>Contact Us</p>
+                            <p>@lang('sidebar.contact_us')</p>
                         </a>
                     </li>
 
@@ -211,7 +211,7 @@
                 <a href="#" class="nav-link">
                     <i class="far fa-newspaper nav-icon"></i>
                     <p>
-                        Social Media
+                        @lang('sidebar.social_media')
                         <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
@@ -219,7 +219,7 @@
                     <li class="nav-item">
                         <a href="{{route('admin.social_media.index')}}" class="nav-link">
                             <i class="far fa-newspaper nav-icon"></i>
-                            <p> Social Media </p>
+                            <p> @lang('sidebar.social_media') </p>
                         </a>
                     </li>
 
@@ -269,7 +269,7 @@
                                                     <a href="#" class="nav-link">
                                                         <i class="fa fa-users nav-icon"></i>
                                                         <p>
-                                                            Our Clients
+                                                            @lang('sidebar.add_clients')
                                                             <i class="right fas fa-angle-left"></i>
                                                         </p>
                                                     </a>
@@ -277,14 +277,14 @@
                                                         <li class="nav-item">
                                                             <a href="{{route('admin.our_clients.index')}}" class="nav-link">
                                                                 <i class="fa fa-users nav-icon"></i>
-                                                                <p>  Our Clients </p>
+                                                                <p>  @lang('sidebar.add_clients') </p>
                                                             </a>
                                                         </li>
 
                                                         <li class="nav-item">
                                                             <a href="{{route('admin.our_clients.add')}}" class="nav-link">
                                                                 <i class="fa fa-plus nav-icon"></i>
-                                                                <p> Add </p>
+                                                                <p> @lang('main.add') </p>
                                                             </a>
                                                         </li>
 
@@ -741,7 +741,7 @@
             <a href="#" class="nav-link">
                 <i class="fas fa-truck"></i>
                 <p>
-                    City Price
+                    @lang('sidebar.city_price')
                     <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
@@ -750,7 +750,7 @@
                 <li class="nav-item">
                     <a href="{{route('admin.city_price.index')}}" class="nav-link">
                         <i class="fa fa-money nav-icon"></i>
-                        <p>  City Price </p>
+                        <p>  @lang('sidebar.city_price') </p>
                     </a>
                 </li>
 

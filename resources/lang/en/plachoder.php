@@ -17,7 +17,8 @@ return [
     'enter_points'=>'Enter Points',
     'enter_pounds'=>'Enter Pounds',
     'enter_order_amount'=>'Enter Order Amount',
-    'enter_order_points'=>'Enter Order Points'
+    'enter_order_points'=>'Enter Order Points',
+    'enter_address'=>'Enter Address',
 
 
  
