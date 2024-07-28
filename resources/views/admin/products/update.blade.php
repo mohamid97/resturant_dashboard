@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Update Product</h1>
+                    <h1>@lang('sidebar.edit_product')</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Update Product </li>
+                        <li class="breadcrumb-item"><a href="#">@lang('main.home')</a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.edit_product')</li>
                     </ol>
                 </div>
             </div>
@@ -22,7 +22,7 @@
 
             <div class="card card-info">
                 <div class="card-header">
-                    <h3 class="card-title">Product</h3>
+                    <h3 class="card-title">@lang('sidebar.products')</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -33,8 +33,8 @@
 
                         @foreach($langs as $lang)
                             <div class="form-group">
-                                <label for="name">Name ({{ $lang->name }}) </label>
-                                <input type="text" name="name[{{$lang->code}}]" class="form-control" id="name" placeholder="Enter Name" value="{{ isset($product->translate($lang->code)->name) ? $product->translate($lang->code)->name :''}}">
+                                <label for="name">@lang('main.name') ({{ $lang->name }}) </label>
+                                <input type="text" name="name[{{$lang->code}}]" class="form-control" id="name" placeholder="@lang('plachoder.enter_name')" value="{{ isset($product->translate($lang->code)->name) ? $product->translate($lang->code)->name :''}}">
                                 @error('name.' . $lang->code)
                                 <div class="text-danger">{{ $errors->first('name.' . $lang->code) }}</div>
                                 @enderror
@@ -50,8 +50,8 @@
 
                             @foreach($langs as $lang)
                                 <div class="form-group">
-                                    <label for="slug">Slug ({{ $lang->name }}) </label>
-                                    <input type="text" name="slug[{{$lang->code}}]" class="form-control" id="slug" placeholder="Enter Slug" value="{{ isset($product->translate($lang->code)->slug) ? $product->translate($lang->code)->slug :'' }}">
+                                    <label for="slug">@lang('main.slug') ({{ $lang->name }}) </label>
+                                    <input type="text" name="slug[{{$lang->code}}]" class="form-control" id="slug" placeholder="@lang('plachoder.enter_slug')" value="{{ isset($product->translate($lang->code)->slug) ? $product->translate($lang->code)->slug :'' }}">
                                     @error('slug.' . $lang->code)
                                     <div class="text-danger">{{ $errors->first('slug.' . $lang->code) }}</div>
                                     @enderror
@@ -66,8 +66,8 @@
 
 
                         <div class="form-group">
-                            <label for="price"> Price  </label>
-                            <input type="text" name="price" class="form-control" id="price" placeholder="Enter Price" value="{{ $product->price }}">
+                            <label for="price"> @lang('main.price')  </label>
+                            <input type="text" name="price" class="form-control" id="price" placeholder="@lang('plachoder.enter_price')" value="{{ $product->price }}">
                             @error('price')
                             <div class="text-danger">{{ $errors->first('price') }}</div>
                             @enderror
@@ -78,7 +78,7 @@
 
 
                                 <div class="form-group">
-                                    <label for="image">Description ({{$lang->name}})</label>
+                                    <label for="image">@lang('main.des') ({{$lang->name}})</label>
                                     <textarea name="des[{{$lang->code}}]" class="ckeditor">
 
                                         @if (isset($product->translate($lang->code)->des))
@@ -101,7 +101,7 @@
                             @foreach($langs as $index => $lang)
 
                                 <div class="form-group">
-                                    <label for="meta_title">Meta Title ({{$lang->name}})</label>
+                                    <label for="meta_title">@lang('main.meta_title') ({{$lang->name}})</label>
                                     <textarea name="meta_title[{{$lang->code}}]" class="ckeditor">
                                        @if (isset($product->translate($lang->code)->meta_title))
                                          
@@ -122,7 +122,7 @@
 
                         @foreach($langs as $index => $lang)
                             <div class="form-group">
-                                <label for="meta_des">Meta Description ({{$lang->name}})</label>
+                                <label for="meta_des">@lang('main.meta_des') ({{$lang->name}})</label>
                                 <textarea name="meta_des[{{$lang->code}}]" class="ckeditor">
                                      @if (isset($product->translate($lang->code)->meta_des))
 
@@ -143,7 +143,7 @@
                         <div class="form-group">
                             <label>Category</label>
                             <select type="text" name="category" class="form-control">
-                                <option value="0">Select Category</option>
+                                <option value="0">@lang('main.select_category') </option>
                                 @forelse($categories as $category)
                                     <option value="{{$category->id}}">{{$category->translate($langs[0]->code)->name}}</option>
                                 @empty
@@ -160,7 +160,7 @@
 
                             <div class="row">
                                 <div class="col-md-8">
-                                    <lable>Star</lable>
+                                    <lable>@lang('main.star') </lable>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="custom-control custom-checkbox">
@@ -183,7 +183,7 @@
 
 
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> Update</button>
+                        <button type="submit" class="btn btn-info"> <i class="nav-icon fas fa-paper-plane"></i> @lang('main.update') </button>
                     </div>
 
 

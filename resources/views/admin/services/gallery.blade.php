@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Services </h1>
+                    <h1>@lang('sidebar.servces')  </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Services</li>
+                        <li class="breadcrumb-item"><a href="#">@lang('main.home') </a></li>
+                        <li class="breadcrumb-item active">@lang('sidebar.servces') </li>
                     </ol>
                 </div>
             </div>
@@ -25,14 +25,14 @@
                 <form method="post" action="{{route('admin.services.save_gallery' , ['id'=>$service->id])}}" enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
-                        <label for="image">Photo</label>
+                        <label for="image">@lang('main.photo') </label>
                         <div class="input-group">
                             <div class="custom-file">
                                 <input name="photo" type="file" class="custom-file-input" id="image">
                                 <label class="custom-file-label" for="image">Choose Photo</label>
                             </div>
                             <div class="input-group-append">
-                                <span class="input-group-text" id="">Upload</span>
+                                <span class="input-group-text" id="">@lang('main.upload') </span>
                             </div>
                         </div>
 
@@ -42,7 +42,7 @@
                     </div>
 
                         <button class="btn btn-info" type="submit">
-                            <i class="nav-icon fas fa-plus"></i> Add New Photo
+                            <i class="nav-icon fas fa-plus"></i> @lang('main.add_new_photo') 
                         </button>
 
                 </form>
@@ -54,7 +54,7 @@
             <div class="card card-info">
 
                 <div class="card-header">
-                    <h3 class="card-title">Gallery</h3>
+                    <h3 class="card-title">@lang('main.gallery') </h3>
 
                 </div>
                 <!-- /.card-header -->
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                         @empty
-                           <p class="badge badge-danger"> No Photo</p>
+                           <p class="badge badge-danger"> @lang('main.no_photo') </p>
                         @endforelse
 
 

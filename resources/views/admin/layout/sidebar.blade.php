@@ -236,7 +236,7 @@
                         <a href="#" class="nav-link">
                             <i class="fas fa-comments"></i>
                             <p>
-                             Faq
+                                @lang('sidebar.faq')
                             <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -245,7 +245,7 @@
                         <li class="nav-item">
                             <a href="{{route('admin.main_faq.index')}}" class="nav-link">
                                 <i class="fas fa-comments"></i>
-                                <p> Main Data </p>
+                                <p> @lang('sidebar.main_faq') </p>
                             </a>
                         </li>
 
@@ -253,7 +253,7 @@
                         <li class="nav-item">
                             <a href="{{route('admin.faq.index')}}" class="nav-link">
                                 <i class="fas fa-comments"></i>
-                                <p> Faq </p>
+                                <p> @lang('sidebar.faq') </p>
                             </a>
                         </li>
 
@@ -297,7 +297,7 @@
                             <a href="#" class="nav-link">
                                 <i class="fa fa-user-circle nav-icon"></i>
                                 <p>
-                                    Users
+                                    @lang('sidebar.users')
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -305,7 +305,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.users.index')}}" class="nav-link">
                                         <i class="fa fa-user nav-icon"></i>
-                                        <p>  My Users </p>
+                                        <p>   @lang('sidebar.my_users') </p>
                                     </a>
                                 </li>
 
@@ -320,7 +320,7 @@
                                 <a href="#" class="nav-link">
                                     <i class="fa fa-briefcase nav-icon"></i>
                                     <p>
-                                        Our Works
+                                        @lang('sidebar.our_work')
                                         <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
@@ -329,7 +329,7 @@
                                     <li class="nav-item">
                                         <a href="{{route('admin.our_works.index')}}" class="nav-link">
                                             <i class="fa fa-briefcase nav-icon"></i>
-                                            <p>  Our Works </p>
+                                            <p> @lang('sidebar.our_work') </p>
                                         </a>
                                     </li>
 
@@ -406,7 +406,7 @@
                                 <a href="#" class="nav-link">
                                     <i class="fa fa-bars nav-icon"></i>
                                     <p>
-                                        Category
+                                        @lang('sidebar.category') 
                                         <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
@@ -415,7 +415,7 @@
                                     <li class="nav-item">
                                         <a href="{{route('admin.category.index')}}" class="nav-link">
                                             <i class="fa fa-bars nav-icon"></i>
-                                            <p>  Category </p>
+                                            <p>  @lang('sidebar.category')  </p>
                                         </a>
                                     </li>
 
@@ -423,7 +423,7 @@
                                     <li class="nav-item">
                                         <a href="{{route('admin.category.add')}}" class="nav-link">
                                             <i class="fa fa-plus  nav-icon"></i>
-                                            <p>  Add </p>
+                                            <p>  @lang('main.add')  </p>
                                         </a>
                                     </li>
 
@@ -438,7 +438,7 @@
                             <a href="#" class="nav-link">
                                 <i class="fa fa-search nav-icon"></i>
                                 <p>
-                                    Products
+                                    @lang('sidebar.products')
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -447,7 +447,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.products.index')}}" class="nav-link">
                                         <i class="fa fa-language nav-icon"></i>
-                                        <p>  Products </p>
+                                        <p>  @lang('sidebar.products') </p>
                                     </a>
                                 </li>
 
@@ -455,7 +455,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.products.add')}}" class="nav-link">
                                         <i class="fa fa-plus nav-icon"></i>
-                                        <p>  Add </p>
+                                        <p>  @lang('main.add') </p>
                                     </a>
                                 </li>
 
@@ -469,7 +469,7 @@
                             <a href="#" class="nav-link">
                                 <i class="fa fa-building nav-icon"></i>
                                 <p>
-                                    Services
+                                    @lang('sidebar.services')
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -478,7 +478,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.services.index')}}" class="nav-link">
                                         <i class="fa fa-building nav-icon"></i>
-                                        <p>  Services </p>
+                                        <p>   @lang('sidebar.services') </p>
                                     </a>
                                 </li>
 
@@ -486,7 +486,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.services.add')}}" class="nav-link">
                                         <i class="fa fa-plus  nav-icon"></i>
-                                        <p>  Add </p>
+                                        <p>   @lang('main.add') </p>
                                     </a>
                                 </li>
 
@@ -501,7 +501,7 @@
                             <a href="#" class="nav-link">
                                 <i class="fa fa-newspaper nav-icon"></i>
                                 <p>
-                                    CMS
+                                    @lang('sidebar.blog')
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -510,7 +510,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.cms.index')}}" class="nav-link">
                                         <i class="fa fa-newspaper nav-icon"></i>
-                                        <p>  cms </p>
+                                        <p>   @lang('sidebar.blog') </p>
                                     </a>
                                 </li>
 
@@ -518,7 +518,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.cms.add')}}" class="nav-link">
                                         <i class="fa fa-plus  nav-icon"></i>
-                                        <p>  Add </p>
+                                        <p>   @lang('main.add') </p>
                                     </a>
                                 </li>
 
@@ -531,7 +531,7 @@
                         <a href="#" class="nav-link">
                             <i class="fas fa-dollar-sign nav-icon"></i>
                             <p>
-                                Payments
+                                @lang('sidebar.payments')
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -540,7 +540,7 @@
                             <li class="nav-item">
                                 <a href="{{route('admin.payments.index')}}" class="nav-link">
                                     <i class="fas fa-dollar-sign nav-icon"></i>
-                                    <p>  Payments </p>
+                                    <p>   @lang('sidebar.payments') </p>
                                 </a>
                             </li>
 
@@ -548,7 +548,7 @@
                             <li class="nav-item">
                                 <a href="{{route('admin.payments.status')}}" class="nav-link">
                                     <i class="fas fa-dollar-sign nav-icon"></i>
-                                    <p>  Status </p>
+                                    <p>   @lang('main.status') </p>
                                 </a>
                             </li>
 
@@ -563,26 +563,26 @@
 
 
                     @if($settings->mission_vission)
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="fa fa-newspaper nav-icon"></i>
-                            <p>
-                                Mission And Vission
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-
-                            <li class="nav-item">
-                                <a href="{{route('admin.mission_vission.index')}}" class="nav-link">
+                            <li class="nav-item has-treeview">
+                                <a href="#" class="nav-link">
                                     <i class="fa fa-newspaper nav-icon"></i>
-                                    <p>  Mission Vission </p>
+                                    <p>
+                                        @lang('sidebar.mission_vission')
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
                                 </a>
+                                <ul class="nav nav-treeview">
+
+                                    <li class="nav-item">
+                                        <a href="{{route('admin.mission_vission.index')}}" class="nav-link">
+                                            <i class="fa fa-newspaper nav-icon"></i>
+                                            <p> @lang('sidebar.mission_vission') </p>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
                             </li>
-
-
-                        </ul>
-                    </li>
                 @endif
 
 
@@ -779,7 +779,7 @@
                             <a href="#" class="nav-link">
                                 <i class="fa fa-microphone nav-icon"></i>
                                 <p>
-                                    Media
+                                    @lang('main.media')
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -788,14 +788,14 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.group_media.index')}}" class="nav-link">
                                         <i class="fa fa-images nav-icon"></i>
-                                        <p>   Media Group </p>
+                                        <p>   @lang('main.media') </p>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
                                     <a href="{{route('admin.media.gallery')}}" class="nav-link">
                                         <i class="fa fa-images nav-icon"></i>
-                                        <p>  Gallery </p>
+                                        <p>   @lang('main.gallery') </p>
                                     </a>
                                 </li>
 
@@ -803,7 +803,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.media.videos')}}" class="nav-link">
                                         <i class="fa fa-video  nav-icon"></i>
-                                        <p>  Video </p>
+                                        <p>   @lang('main.videos') </p>
                                     </a>
                                 </li>
 
@@ -811,7 +811,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('admin.media.files')}}" class="nav-link">
                                         <i class="fa fa-file  nav-icon"></i>
-                                        <p>  Files </p>
+                                        <p>   @lang('main.files') </p>
                                     </a>
                                 </li>
 
@@ -825,7 +825,7 @@
                                 <a href="#" class="nav-link">
                                     <i class="fa fa-comment nav-icon"></i>
                                     <p>
-                                        Descriptions
+                                        @lang('sidebar.des') 
                                         <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
@@ -834,7 +834,7 @@
                                     <li class="nav-item">
                                         <a href="{{route('admin.des.index')}}" class="nav-link">
                                             <i class="fa fa-comment nav-icon"></i>
-                                            <p>  Description </p>
+                                            <p>    @lang('sidebar.des')  </p>
                                         </a>
                                     </li>
 
@@ -842,7 +842,7 @@
                                     <li class="nav-item">
                                         <a href="{{route('admin.des.add')}}" class="nav-link">
                                             <i class="fa fa-plus  nav-icon"></i>
-                                            <p>  Add </p>
+                                            <p>    @lang('sidebar.add')  </p>
                                         </a>
                                     </li>
 

@@ -19,6 +19,21 @@ return [
     'enter_order_amount'=>'Enter Order Amount',
     'enter_order_points'=>'Enter Order Points',
     'enter_address'=>'Enter Address',
+    'enter_slug'=>'Enter Slug',
+    'enter_question'=>'Enter Question',
+    'enter_answer'=>'Enter Answer',
+    'enter_first_name'=>'Enter First Name',
+    'enter_last_name'=>'Enter Last Name',
+    'enter_email'=>'Enter Email',
+    'enter_phone'=>'Enter Phone',
+    'enter_mission'=>'Enter Mission',
+    'enter_vission'=>'Enter_vission',
+    'enter_services'=>'Enter Services',
+    'enter_breif'=>'Enter Breif',
+    'enter_about'=>'Enter About'
+
+
+
 
 
  
